@@ -1,4 +1,4 @@
-# viu-timers
+# Timers
 
 ## Project setup
 ```
