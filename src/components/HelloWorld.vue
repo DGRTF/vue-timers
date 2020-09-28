@@ -1,14 +1,18 @@
 <template>
   <div class="timer">
-    <div class="timer__view-container">
+    <div class="timer__view-container" :class="{timer__active: isTimer}">
       <span>{{time}}</span>
     </div>
     <hr class="timer__horizontal" />
     <div class="timer__manage">
       <button
-      class="timer__manage-button timer__play-pause"
-      v-on:click="runPauseTimeout">{{playPauseButton}}</button>
-      <button class="timer__manage-button" v-on:click="cancelTimeout">stop</button>
+        class="timer__manage-button timer__play-pause"
+        :class="{timer__active: isTimer}"
+        v-on:click="runPauseTimeout">{{playPauseButton}}</button>
+      <button
+        class="timer__manage-button"
+        :class="{timer__active: isTimer}"
+        v-on:click="cancelTimeout">stop</button>
     </div>
   </div>
 </template>
@@ -162,7 +166,16 @@ export default {
     outline: none;
     color: #9e9e9e;
     font-family: 'Material Icons';
-    font-size: 20px;
+    font-size: 30px;
+
+    &:hover,
+    &:focus{
+      color: #FFFFFF;
+    }
+  }
+
+  &__active {
+    color: #FFFFFF;
   }
 }
 </style>
