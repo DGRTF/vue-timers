@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <HelloWorld v-for="n in count" :key="n"></HelloWorld>
+    <Timer v-for="n in count" :key="n"></Timer>
     <div class="app__addTimer">
       <button class="app__addTimer-button" v-on:click="addTimer">+</button>
     </div>
@@ -8,7 +8,7 @@
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue';
+import Timer from './components/Timer.vue';
 
 export default {
   name: 'App',
@@ -26,7 +26,7 @@ export default {
   },
 
   components: {
-    HelloWorld,
+    Timer,
   },
 
 };
