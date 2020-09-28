@@ -59,10 +59,14 @@ export default {
     font-size: 30px;
     color: #9e9e9e;
     outline: none;
+    font-family: Gotham Pro;
+    font-style: normal;
+    font-weight: normal;
+    text-align: center;
 
     &:hover,
-    &:focus{
-      color: #FFFFFF;
+    &:focus {
+      color: #ffffff;
     }
   }
 }
