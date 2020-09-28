@@ -63,6 +63,7 @@ export default {
     font-style: normal;
     font-weight: normal;
     text-align: center;
+    cursor: pointer;
 
     &:hover,
     &:focus {
